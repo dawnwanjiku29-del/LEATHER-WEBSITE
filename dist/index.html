@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Looking Good Rugged | Leather Bags</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4eee7;
+    color: #2c211a;
+    line-height: 1.6;
+}
+
+header {
+    background: #17120e;
+    padding: 20px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #c2915e;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul a:hover {
+    color: #c2915e;
+}
+
+.hero {
+    min-height: 580px;
+    background:
+        linear-gradient(rgba(25,16,10,.65), rgba(25,16,10,.65)),
+        url("images/studio/bag4.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 780px;
+    color: white;
+}
+
+.small {
+    color: #c2915e;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 72px);
+    line-height: 1.05;
+    margin: 15px 0;
+}
+
+.hero p:not(.small) {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: #b57d45;
+    color: white;
+    text-decoration: none;
+    padding: 13px 28px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background: #8b5c34;
+}
+
+.products {
+    max-width: 1250px;
+    margin: auto;
+    padding: 80px 25px;
+}
+
+.heading > p:last-child {
+    color: #6b625b;
+    max-width: 510px;
+    margin: 0 auto;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.heading h2, .contact h2 {
+    font-size: 42px;
+    margin: 8px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.card {
+    background: #fffaf5;
+    border: 1px solid #dfd3c6;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.14);
+}
+
+.image-box {
+    height: 330px;
+    overflow: hidden;
+    background: #f4eee7;
+    border-bottom: 1px solid #eadfd4;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: .4s;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.info {
+    padding: 22px;
+}
+
+.tag {
+    color: #a16d3e;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.info h3 {
+    font-size: 21px;
+    margin: 7px 0;
+}
+
+.info p {
+    color: #6b625b;
+    margin-bottom: 18px;
+}
+
+.price-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.price-row a {
+    background: #2c211a;
+    color: white;
+    text-decoration: none;
+    padding: 10px 19px;
+    border-radius: 3px;
+}
+
+.price-row a:hover {
+    background: #b57d45;
+}
+
+.about {
+    background: #2c211a;
+    color: white;
+    padding: 80px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about h2 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-top: 10px;
+}
+
+.about p:last-child {
+    color: #ddd1c5;
+    font-size: 17px;
+}
+
+.contact {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.contact-box {
+    max-width: 500px;
+    margin: 25px auto 30px;
+    background: #fffaf5;
+    padding: 22px;
+    border: 1px solid #ddd2c7;
+}
+
+.contact-box p {
+    margin: 7px;
+}
+
+.contact-box a {
+    color: #704725;
+    font-weight: bold;
+    text-decoration-color: #c2915e;
+    text-underline-offset: 3px;
+}
+
+footer {
+    background: #17120e;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 850px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 550px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-box {
+        height: 310px;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+    <a class="logo" href="#home">LOOKING GOOD <span>RUGGED</span></a>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#bags">Bags</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="small">AUTHENTIC LEATHER COLLECTION</p>
+        <h1>Rugged Style.<br>Timeless Quality.</h1>
+        <p>Quality leather bags made for people who appreciate strength, style and character.</p>
+        <a href="#bags" class="button">VIEW OUR BAGS</a>
+    </div>
+</section>
+
+<section class="products" id="bags">
+    <div class="heading">
+        <p class="small">OUR COLLECTION</p>
+        <h2>Leather Bags</h2>
+        <p>Explore our collection of handcrafted leather products.</p>
+    </div>
+
+    <div class="grid">
+        
+        <div class="card">
+            <div class="image-box">
+                <img src="images/studio/bag1.png" alt="Rugged Leather Briefcase">
+            </div>
+            <div class="info">
+                <span class="tag">BRIEFCASE</span>
+                <h3>Rugged Leather Briefcase</h3>
+                <p>Strong, practical and made for a professional look.</p>
+                <div class="price-row">
+                    <a href="#contact">Enquire about this bag</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="image-box">
+                <img src="images/studio/bag2.png" alt="Classic Leather Satchel">
+            </div>
+            <div class="info">
+                <span class="tag">SATCHEL</span>
+                <h3>Classic Leather Satchel</h3>
+                <p>A timeless leather design for everyday use.</p>
+                <div class="price-row">
+                    <a href="#contact">Enquire about this bag</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="image-box">
+                <img src="images/studio/bag3.png" alt="Cowhide Leather Tote">
+            </div>
+            <div class="info">
+                <span class="tag">TOTE BAG</span>
+                <h3>Cowhide Leather Tote</h3>
+                <p>A spacious tote with a distinctive natural finish.</p>
+                <div class="price-row">
+                    <a href="#contact">Enquire about this bag</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="image-box">
+                <img src="images/studio/bag4.png" alt="Rugged Travel Duffel">
+            </div>
+            <div class="info">
+                <span class="tag">TRAVEL BAG</span>
+                <h3>Rugged Travel Duffel</h3>
+                <p>A durable travel companion for work and adventure.</p>
+                <div class="price-row">
+                    <a href="#contact">Enquire about this bag</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="image-box">
+                <img src="images/studio/bag5.png" alt="Handcrafted Leather Bag">
+            </div>
+            <div class="info">
+                <span class="tag">PREMIUM</span>
+                <h3>Handcrafted Leather Bag</h3>
+                <p>Warm brown leather with detailed stitching and straps.</p>
+                <div class="price-row">
+                    <a href="#contact">Enquire about this bag</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="image-box">
+                <img src="images/studio/bag6.png" alt="Leather Shoulder Bag">
+            </div>
+            <div class="info">
+                <span class="tag">SHOULDER BAG</span>
+                <h3>Leather Shoulder Bag</h3>
+                <p>Compact, stylish and easy to carry anywhere.</p>
+                <div class="price-row">
+                    <a href="#contact">Enquire about this bag</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="image-box">
+                <img src="images/studio/bag7.png" alt="Classic Brown Handbag">
+            </div>
+            <div class="info">
+                <span class="tag">HANDBAG</span>
+                <h3>Classic Brown Handbag</h3>
+                <p>Simple leather styling with a strong, elegant finish.</p>
+                <div class="price-row">
+                    <a href="#contact">Enquire about this bag</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="image-box">
+                <img src="images/studio/bag8.png" alt="Leather Portfolio">
+            </div>
+            <div class="info">
+                <span class="tag">PORTFOLIO</span>
+                <h3>Leather Portfolio</h3>
+                <p>A clean leather folder for documents and essentials.</p>
+                <div class="price-row">
+                    <a href="#contact">Enquire about this bag</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="image-box">
+                <img src="images/studio/bag9.png" alt="Premium Leather Tote">
+            </div>
+            <div class="info">
+                <span class="tag">TOTE BAG</span>
+                <h3>Premium Leather Tote</h3>
+                <p>Spacious and stylish for work or daily use.</p>
+                <div class="price-row">
+                    <a href="#contact">Enquire about this bag</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="image-box">
+                <img src="images/studio/bag10.png" alt="Leather Carry Bag">
+            </div>
+            <div class="info">
+                <span class="tag">CARRY BAG</span>
+                <h3>Leather Carry Bag</h3>
+                <p>A rugged design built for everyday carrying.</p>
+                <div class="price-row">
+                    <a href="#contact">Enquire about this bag</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="image-box">
+                <img src="images/studio/bag11.png" alt="Rugged Phone Pouch">
+            </div>
+            <div class="info">
+                <span class="tag">ACCESSORY</span>
+                <h3>Rugged Phone Pouch</h3>
+                <p>A handcrafted leather pouch for small essentials.</p>
+                <div class="price-row">
+                    <a href="#contact">Enquire about this bag</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="image-box">
+                <img src="images/studio/bag12.png" alt="Leather Stool Cover">
+            </div>
+            <div class="info">
+                <span class="tag">LEATHER HOME</span>
+                <h3>Handcrafted Leather Seat</h3>
+                <p>A warm, handcrafted leather piece with decorative stitching.</p>
+                <div class="price-row">
+                    <a href="#contact">Enquire about this bag</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-box">
+                <img src="images/studio/bag13.png" alt="Rugged Backpack">
+            </div>
+            <div class="info">
+                <span class="tag">BACKPACK</span>
+                <h3>Rugged Everyday Backpack</h3>
+                <p>A practical backpack designed for everyday carrying and travel.</p>
+                <div class="price-row">
+                    <a href="#contact">Enquire about this bag</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-box">
+                <img src="images/studio/bag14.png" alt="Leather Backpack">
+            </div>
+            <div class="info">
+                <span class="tag">BACKPACK</span>
+                <h3>Classic Leather Backpack</h3>
+                <p>Comfortable, durable and made for a rugged everyday look.</p>
+                <div class="price-row">
+                    <a href="#contact">Enquire about this bag</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-box">
+                <img src="images/studio/bag15.png" alt="Beaded Leather Pouches">
+            </div>
+            <div class="info">
+                <span class="tag">ACCESSORY</span>
+                <h3>Beaded Leather Pouches</h3>
+                <p>Stylish handmade leather pouches with colourful beadwork.</p>
+                <div class="price-row">
+                    <a href="#contact">Enquire about this bag</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-box">
+                <img src="images/studio/bag16.png" alt="Cowhide Leather Crossbody Bag">
+            </div>
+            <div class="info">
+                <span class="tag">CROSSBODY BAG</span>
+                <h3>Cowhide Leather Crossbody</h3>
+                <p>A distinctive everyday crossbody finished with natural cowhide detail.</p>
+                <div class="price-row">
+                    <a href="#contact">Enquire about this bag</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-box">
+                <img src="images/studio/bag17.png" alt="Beaded Leather Wristlet Pouch">
+            </div>
+            <div class="info">
+                <span class="tag">ACCESSORY</span>
+                <h3>Beaded Leather Wristlet</h3>
+                <p>A compact leather pouch with a colourful handcrafted beaded centrepiece.</p>
+                <div class="price-row">
+                    <a href="#contact">Enquire about this bag</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-box">
+                <img src="images/studio/bag18.png" alt="Tan Leather Travel Duffel">
+            </div>
+            <div class="info">
+                <span class="tag">TRAVEL BAG</span>
+                <h3>Tan Leather Travel Duffel</h3>
+                <p>A spacious, softly structured leather duffel made for weekends away.</p>
+                <div class="price-row">
+                    <a href="#contact">Enquire about this bag</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div>
+        <p class="small">ABOUT US</p>
+        <h2>Made to Look Good.<br>Built to Last.</h2>
+    </div>
+    <p>
+        Looking Good Rugged creates practical and stylish leather products
+        designed for everyday life, work and travel. Our collection combines
+        strong construction with a classic rugged appearance.
+    </p>
+</section>
+
+<section class="contact" id="contact">
+    <p class="small">GET IN TOUCH</p>
+    <h2>Find Your Rugged Look</h2>
+    <p>Contact us to place an order or ask about our leather collection.</p>
+
+    <div class="contact-box">
+        <p><strong>Email:</strong> lookinggoodrugged@example.com</p>
+        <p><strong>Phone:</strong> <a href="tel:+254720929666">+254720929666</a></p>
+        <p><strong>Location:</strong> Nairobi, Kenya</p>
+    </div>
+
+    <a class="button" href="mailto:lookinggoodrugged@example.com">EMAIL US</a>
+</section>
+
+<footer>
+    <p>© 2026 Looking Good Rugged. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
