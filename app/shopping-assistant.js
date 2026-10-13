@@ -16,8 +16,8 @@ export default function ShoppingAssistant() {
     <section className="assistant" aria-labelledby="assistant-title">
       <div>
         <p className="eyebrow">BAG GUIDE</p>
-        <h2 id="assistant-title">Not sure which bag fits your day?</h2>
-        <p>Tell us how you plan to use it and get a quick collection suggestion.</p>
+        <h2 id="assistant-title">The right bag changes the rhythm of a day.</h2>
+        <p>Tell us where you are headed and we’ll point you toward a fitting piece.</p>
       </div>
       <form onSubmit={handleSubmit} className="assistant-form">
         <label htmlFor="bag-question">What are you looking for?</label>

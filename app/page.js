@@ -18,12 +18,23 @@ export default function Home() {
 
       <main>
         <section className="hero" id="home">
+          <div className="hero-index" aria-hidden="true">01 / 04</div>
           <div className="hero-content">
             <p className="eyebrow">AUTHENTIC LEATHER COLLECTION</p>
-            <h1>Rugged Style.<br />Timeless Quality.</h1>
-            <p>Quality leather bags made for people who appreciate strength, style and character.</p>
-            <a href="#bags" className="button">VIEW OUR BAGS</a>
+            <h1><span>Carry the</span><br />character.</h1>
+            <p>Leather bags with the strength to work hard and the presence to be remembered.</p>
+            <div className="hero-actions">
+              <a href="#bags" className="button">Explore the collection <span aria-hidden="true">↘</span></a>
+              <a href="#about" className="text-link">Our point of view <span aria-hidden="true">↘</span></a>
+            </div>
           </div>
+          <p className="hero-note">Made for the everyday<br />and the long way round.</p>
+        </section>
+
+        <section className="manifesto" aria-label="Our approach">
+          <p className="eyebrow">01 — THE MATERIAL</p>
+          <p className="manifesto-copy">The marks of use are not an afterthought. They are part of the design.</p>
+          <p className="manifesto-detail">A considered collection of leather pieces for work, travel, and the stories in between.</p>
         </section>
 
         <ProductCollection />

@@ -26,8 +26,8 @@ export default function ProductCollection() {
     <section className="products" id="bags" aria-labelledby="bags-title">
       <div className="heading">
         <p className="eyebrow">OUR COLLECTION</p>
-        <h2 id="bags-title">Leather Bags</h2>
-        <p>Explore our collection of handcrafted leather products.</p>
+        <h2 id="bags-title">Find your<br /><em>everyday piece.</em></h2>
+        <p>Handcrafted leather products with purpose, presence, and room to live in.</p>
       </div>
 
       <div className="catalog-tools" aria-label="Browse the collection">
