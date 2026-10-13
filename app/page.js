@@ -1,25 +1,5 @@
 import ShoppingAssistant from './shopping-assistant';
-
-const products = [
-  ['bag1', 'BRIEFCASE', 'Rugged Leather Briefcase', 'Strong, practical and made for a professional look.'],
-  ['bag2', 'SATCHEL', 'Classic Leather Satchel', 'A timeless leather design for everyday use.'],
-  ['bag3', 'TOTE BAG', 'Cowhide Leather Tote', 'A spacious tote with a distinctive natural finish.'],
-  ['bag4', 'TRAVEL BAG', 'Rugged Travel Duffel', 'A durable travel companion for work and adventure.'],
-  ['bag5', 'PREMIUM', 'Handcrafted Leather Bag', 'Warm brown leather with detailed stitching and straps.'],
-  ['bag6', 'SHOULDER BAG', 'Leather Shoulder Bag', 'Compact, stylish and easy to carry anywhere.'],
-  ['bag7', 'HANDBAG', 'Classic Brown Handbag', 'Simple leather styling with a strong, elegant finish.'],
-  ['bag8', 'PORTFOLIO', 'Leather Portfolio', 'A clean leather folder for documents and essentials.'],
-  ['bag9', 'TOTE BAG', 'Premium Leather Tote', 'Spacious and stylish for work or daily use.'],
-  ['bag10', 'CARRY BAG', 'Leather Carry Bag', 'A rugged design built for everyday carrying.'],
-  ['bag11', 'ACCESSORY', 'Rugged Phone Pouch', 'A handcrafted leather pouch for small essentials.'],
-  ['bag12', 'LEATHER HOME', 'Handcrafted Leather Seat', 'A warm, handcrafted leather piece with decorative stitching.'],
-  ['bag13', 'BACKPACK', 'Rugged Everyday Backpack', 'A practical backpack designed for everyday carrying and travel.'],
-  ['bag14', 'BACKPACK', 'Classic Leather Backpack', 'Comfortable, durable and made for a rugged everyday look.'],
-  ['bag15', 'ACCESSORY', 'Beaded Leather Pouches', 'Stylish handmade leather pouches with colourful beadwork.'],
-  ['bag16', 'CROSSBODY BAG', 'Cowhide Leather Crossbody', 'A distinctive everyday crossbody finished with natural cowhide detail.'],
-  ['bag17', 'ACCESSORY', 'Beaded Leather Wristlet', 'A compact leather pouch with a colourful handcrafted beaded centrepiece.'],
-  ['bag18', 'TRAVEL BAG', 'Tan Leather Travel Duffel', 'A spacious, softly structured leather duffel made for weekends away.']
-];
+import ProductCollection from './product-collection';
 
 export default function Home() {
   return (
@@ -46,28 +26,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="products" id="bags" aria-labelledby="bags-title">
-          <div className="heading">
-            <p className="eyebrow">OUR COLLECTION</p>
-            <h2 id="bags-title">Leather Bags</h2>
-            <p>Explore our collection of handcrafted leather products.</p>
-          </div>
-          <div className="grid">
-            {products.map(([image, tag, name, description]) => (
-              <article className="card" key={image}>
-                <div className="image-box">
-                  <img src={`/images/studio/${image}.png`} alt={name} />
-                </div>
-                <div className="info">
-                  <span className="tag">{tag}</span>
-                  <h3>{name}</h3>
-                  <p>{description}</p>
-                  <a className="enquire" href="#contact">Enquire about this bag</a>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
+        <ProductCollection />
 
         <ShoppingAssistant />
 
