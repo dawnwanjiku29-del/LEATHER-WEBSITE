@@ -4,7 +4,7 @@ import { useMemo, useState } from 'react';
 import { collectionFilters, products } from './products';
 
 const enquiryAddress = 'lookinggoodrugged@example.com';
-const basePath = process.env.GITHUB_ACTIONS ? '/LEATHER-WEBSITE' : '';
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function ProductCollection() {
   const [activeFilter, setActiveFilter] = useState('all');

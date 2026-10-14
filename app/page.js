@@ -2,7 +2,7 @@ import ShoppingAssistant from './shopping-assistant';
 import ProductCollection from './product-collection';
 
 export default function Home() {
-  const basePath = process.env.GITHUB_ACTIONS ? '/LEATHER-WEBSITE' : '';
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   return (
     <>
