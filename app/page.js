@@ -2,8 +2,6 @@ import ShoppingAssistant from './shopping-assistant';
 import ProductCollection from './product-collection';
 
 export default function Home() {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
   return (
     <>
       <header>
@@ -31,7 +29,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-product" aria-hidden="true">
-            <img src={`${basePath}/images/cutouts/bag20.png`} alt="" />
+            <img src="images/cutouts/bag20.png" alt="" />
           </div>
           <p className="hero-note">Made for the everyday<br />and the long way round.</p>
         </section>

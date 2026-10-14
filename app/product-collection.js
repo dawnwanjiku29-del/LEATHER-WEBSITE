@@ -4,8 +4,6 @@ import { useMemo, useState } from 'react';
 import { collectionFilters, products } from './products';
 
 const enquiryAddress = 'lookinggoodrugged@example.com';
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
 export default function ProductCollection() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [search, setSearch] = useState('');
@@ -73,7 +71,7 @@ export default function ProductCollection() {
                 <div className="image-box">
                   <img
                     className={product.imageNumber >= 19 ? 'product-cutout' : ''}
-                    src={`${basePath}/images/${imageFolder}/${imageName}`}
+                    src={`images/${imageFolder}/${imageName}`}
                     alt={product.name}
                     loading="lazy"
                     decoding="async"
