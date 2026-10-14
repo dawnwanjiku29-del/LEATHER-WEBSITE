@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import { collectionFilters, products } from './products';
 
 const enquiryAddress = 'lookinggoodrugged@example.com';
+const basePath = process.env.GITHUB_ACTIONS ? '/LEATHER-WEBSITE' : '';
 
 export default function ProductCollection() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -68,7 +69,7 @@ export default function ProductCollection() {
             return (
               <article className="card" key={product.image}>
                 <div className="image-box">
-                  <img src={`/images/studio/${product.image}`} alt={product.name} loading="lazy" decoding="async" />
+                  <img src={`${basePath}/images/studio/${product.image}`} alt={product.name} loading="lazy" decoding="async" />
                 </div>
                 <div className="info">
                   <span className="tag">{product.tag}</span>

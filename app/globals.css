@@ -1,4 +1,4 @@
-:root { --ink: #2c211a; --dark: #17120e; --tan: #b57d45; --cream: #f4eee7; --card: #fffaf5; }
+:root { --ink: #2c211a; --dark: #17120e; --about: #2b2b2a; --tan: #b57d45; --cream: #f4eee7; --card: #fffaf5; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--cream); color: var(--ink); font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
@@ -66,7 +66,7 @@ nav ul a { color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .08em
 .assistant-controls { display: flex; gap: 10px; }
 .assistant input { min-width: 0; flex: 1; border: 1px solid #bcae9f; border-radius: 4px; padding: 13px; font: inherit; }
 .assistant-answer { margin: 15px 0 0; color: #5d442e; }
-.about { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; padding: 120px 10%; background: var(--ink); color: #fff; }
+.about { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; padding: 120px 10%; background: var(--about); color: #fff; }
 .about h2 { margin: 10px 0 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(46px, 6vw, 78px); font-weight: 400; letter-spacing: -.06em; line-height: .88; }
 .about > p { color: #ddd1c5; font-size: 17px; }
 .contact { padding: 80px 20px; text-align: center; }
