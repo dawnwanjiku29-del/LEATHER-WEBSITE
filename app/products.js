@@ -12,7 +12,6 @@ export const products = [
   { image: 'bag11', tag: 'ACCESSORY', category: 'accessories', name: 'Rugged Phone Pouch', description: 'A handcrafted leather pouch for small essentials.' },
   { image: 'bag12', tag: 'LEATHER HOME', category: 'accessories', name: 'Handcrafted Leather Seat', description: 'A warm, handcrafted leather piece with decorative stitching.' },
   { image: 'bag13', tag: 'BACKPACK', category: 'travel', name: 'Rugged Everyday Backpack', description: 'A practical backpack designed for everyday carrying and travel.' },
-  { image: 'bag14', tag: 'BACKPACK', category: 'travel', name: 'Classic Leather Backpack', description: 'Comfortable, durable and made for a rugged everyday look.' },
   { image: 'bag15', tag: 'ACCESSORY', category: 'accessories', name: 'Beaded Leather Pouches', description: 'Stylish handmade leather pouches with colourful beadwork.' },
   { image: 'bag16', tag: 'CROSSBODY BAG', category: 'everyday', name: 'Cowhide Leather Crossbody', description: 'A distinctive everyday crossbody finished with natural cowhide detail.' },
   { image: 'bag17', tag: 'ACCESSORY', category: 'accessories', name: 'Beaded Leather Wristlet', description: 'A compact leather pouch with a colourful handcrafted beaded centrepiece.' },
