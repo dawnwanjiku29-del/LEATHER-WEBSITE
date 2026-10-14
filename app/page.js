@@ -22,7 +22,7 @@ export default function Home() {
         <section
           className="hero"
           id="home"
-          style={{ backgroundImage: `linear-gradient(rgba(25, 16, 10, .65), rgba(25, 16, 10, .65)), url('${basePath}/images/studio/bag4.png')` }}
+          style={{ backgroundImage: `linear-gradient(105deg, rgba(45, 25, 18, .94), rgba(72, 40, 29, .82)), url('${basePath}/images/studio/bag4.png')` }}
         >
           <div className="hero-index" aria-hidden="true">01 / 04</div>
           <div className="hero-content">
