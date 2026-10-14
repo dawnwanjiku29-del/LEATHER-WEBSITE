@@ -2,6 +2,8 @@ import ShoppingAssistant from './shopping-assistant';
 import ProductCollection from './product-collection';
 
 export default function Home() {
+  const basePath = process.env.GITHUB_ACTIONS ? '/LEATHER-WEBSITE' : '';
+
   return (
     <>
       <header>
@@ -17,7 +19,11 @@ export default function Home() {
       </header>
 
       <main>
-        <section className="hero" id="home">
+        <section
+          className="hero"
+          id="home"
+          style={{ backgroundImage: `linear-gradient(rgba(25, 16, 10, .65), rgba(25, 16, 10, .65)), url('${basePath}/images/studio/bag4.png')` }}
+        >
           <div className="hero-index" aria-hidden="true">01 / 04</div>
           <div className="hero-content">
             <p className="eyebrow">AUTHENTIC LEATHER COLLECTION</p>

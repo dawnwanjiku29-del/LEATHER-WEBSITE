@@ -10,7 +10,7 @@ nav { max-width: 1400px; margin: auto; display: flex; align-items: center; justi
 nav ul { display: flex; flex-wrap: wrap; gap: 25px; list-style: none; margin: 0; padding: 0; }
 nav a:hover, nav a:focus-visible { color: #c2915e; }
 nav ul a { color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
-.hero { isolation: isolate; min-height: min(780px, calc(100vh - 60px)); position: relative; display: grid; align-items: end; padding: 65px 7% 66px; color: #fff; background: linear-gradient(rgba(25, 16, 10, .65), rgba(25, 16, 10, .65)), url('/images/studio/bag4.png') center / cover no-repeat; }
+.hero { isolation: isolate; min-height: min(780px, calc(100vh - 60px)); position: relative; display: grid; align-items: end; padding: 65px 7% 66px; color: #fff; background-color: var(--dark); background-position: center; background-size: cover; background-repeat: no-repeat; }
 .hero::after { position: absolute; z-index: -1; inset: 0; content: ''; background: linear-gradient(rgba(25, 16, 10, .65), rgba(25, 16, 10, .65)); opacity: .25; }
 .hero-content { max-width: 800px; animation: rise-in .8s ease-out both; }
 .eyebrow { margin: 0; font-size: 11px; font-weight: 700; letter-spacing: .22em; }
