@@ -66,10 +66,18 @@ export default function ProductCollection() {
           {visibleProducts.map((product) => {
             const subject = encodeURIComponent(`Enquiry: ${product.name}`);
             const body = encodeURIComponent(`Hello Looking Good Rugged,\n\nI would like to enquire about the ${product.name}.\n\nThank you.`);
+            const imageFolder = product.imageNumber >= 19 ? 'cutouts' : 'studio';
+            const imageName = product.imageNumber >= 19 ? `bag${product.imageNumber}.png` : product.image;
             return (
               <article className="card" key={product.image}>
                 <div className="image-box">
-                  <img src={`${basePath}/images/studio/${product.image}`} alt={product.name} loading="lazy" decoding="async" />
+                  <img
+                    className={product.imageNumber >= 19 ? 'product-cutout' : ''}
+                    src={`${basePath}/images/${imageFolder}/${imageName}`}
+                    alt={product.name}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <div className="info">
                   <span className="tag">{product.tag}</span>

@@ -19,11 +19,7 @@ export default function Home() {
       </header>
 
       <main>
-        <section
-          className="hero"
-          id="home"
-          style={{ backgroundImage: `linear-gradient(105deg, rgba(45, 25, 18, .94), rgba(72, 40, 29, .82)), url('${basePath}/images/studio/bag4.png')` }}
-        >
+        <section className="hero" id="home">
           <div className="hero-index" aria-hidden="true">01 / 04</div>
           <div className="hero-content">
             <p className="eyebrow">AUTHENTIC LEATHER COLLECTION</p>
@@ -33,6 +29,9 @@ export default function Home() {
               <a href="#bags" className="button">Explore the collection <span aria-hidden="true">↘</span></a>
               <a href="#about" className="text-link">Our point of view <span aria-hidden="true">↘</span></a>
             </div>
+          </div>
+          <div className="hero-product" aria-hidden="true">
+            <img src={`${basePath}/images/cutouts/bag20.png`} alt="" />
           </div>
           <p className="hero-note">Made for the everyday<br />and the long way round.</p>
         </section>

@@ -16,16 +16,16 @@ export const products = [
   { image: 'bag16.png', tag: 'CROSSBODY BAG', category: 'everyday', name: 'Cowhide Leather Crossbody', description: 'A distinctive everyday crossbody finished with natural cowhide detail.' },
   { image: 'bag17.png', tag: 'ACCESSORY', category: 'accessories', name: 'Beaded Leather Wristlet', description: 'A compact leather pouch with a colourful handcrafted beaded centrepiece.' },
   { image: 'bag18.png', tag: 'TRAVEL BAG', category: 'travel', name: 'Tan Leather Travel Duffel', description: 'A spacious, softly structured leather duffel made for weekends away.' },
-  { image: 'bag19.jpeg', tag: 'TRAVEL BAG', category: 'travel', name: 'Tan Leather Weekender', description: 'A roomy zip-top leather weekender with a polished, compact silhouette.' },
-  { image: 'bag20.jpeg', tag: 'BRIEFCASE', category: 'work', name: 'Double-Buckle Leather Briefcase', description: 'A structured leather briefcase with classic brass buckle details.' },
-  { image: 'bag21.png', tag: 'MESSENGER BAG', category: 'work', name: 'Heritage Leather Messenger', description: 'A broad, handcrafted messenger bag with adjustable buckle closures.' },
-  { image: 'bag22.jpeg', tag: 'BACKPACK', category: 'travel', name: 'Classic Leather Rucksack', description: 'A full-size leather backpack designed for commuting and daily carry.' },
-  { image: 'bag23.png', tag: 'TRAVEL BAG', category: 'travel', name: 'Dark Leather Carryall', description: 'A substantial carryall with premium leather panels and brass hardware.' },
-  { image: 'bag24.jpeg', tag: 'DUFFEL BAG', category: 'travel', name: 'Black Leather Duffel', description: 'A generous leather duffel with reinforced handles for weekends away.' },
-  { image: 'bag25.png', tag: 'SHOULDER BAG', category: 'everyday', name: 'Canvas Leather Crossbody', description: 'A compact canvas-and-leather piece with secure zip storage.' },
-  { image: 'bag26.png', tag: 'SLING BAG', category: 'everyday', name: 'Tan Leather Sling Collection', description: 'Three compact sling styles for essentials and hands-free movement.' },
-  { image: 'bag27.png', tag: 'WALLET', category: 'accessories', name: 'Minimal Leather Wallet', description: 'A slim leather wallet with a softly weathered natural finish.' },
-  { image: 'bag28.jpeg', tag: 'ORGANIZER', category: 'accessories', name: 'Travel Utility Organizer', description: 'A practical zip-top organizer with front pockets for essentials.' }
+  { image: 'bag19.jpeg', imageNumber: 19, tag: 'TRAVEL BAG', category: 'travel', name: 'Tan Leather Weekender', description: 'A roomy zip-top leather weekender with a polished, compact silhouette.' },
+  { image: 'bag20.jpeg', imageNumber: 20, tag: 'BRIEFCASE', category: 'work', name: 'Double-Buckle Leather Briefcase', description: 'A structured leather briefcase with classic brass buckle details.' },
+  { image: 'bag21.png', imageNumber: 21, tag: 'MESSENGER BAG', category: 'work', name: 'Heritage Leather Messenger', description: 'A broad, handcrafted messenger bag with adjustable buckle closures.' },
+  { image: 'bag22.jpeg', imageNumber: 22, tag: 'BACKPACK', category: 'travel', name: 'Classic Leather Rucksack', description: 'A full-size leather backpack designed for commuting and daily carry.' },
+  { image: 'bag23.png', imageNumber: 23, tag: 'TRAVEL BAG', category: 'travel', name: 'Dark Leather Carryall', description: 'A substantial carryall with premium leather panels and brass hardware.' },
+  { image: 'bag24.jpeg', imageNumber: 24, tag: 'DUFFEL BAG', category: 'travel', name: 'Black Leather Duffel', description: 'A generous leather duffel with reinforced handles for weekends away.' },
+  { image: 'bag25.png', imageNumber: 25, tag: 'SHOULDER BAG', category: 'everyday', name: 'Canvas Leather Crossbody', description: 'A compact canvas-and-leather piece with secure zip storage.' },
+  { image: 'bag26.png', imageNumber: 26, tag: 'SLING BAG', category: 'everyday', name: 'Tan Leather Sling Collection', description: 'Three compact sling styles for essentials and hands-free movement.' },
+  { image: 'bag27.png', imageNumber: 27, tag: 'WALLET', category: 'accessories', name: 'Minimal Leather Wallet', description: 'A slim leather wallet with a softly weathered natural finish.' },
+  { image: 'bag28.jpeg', imageNumber: 28, tag: 'ORGANIZER', category: 'accessories', name: 'Travel Utility Organizer', description: 'A practical zip-top organizer with front pockets for essentials.' }
 ];
 
 export const collectionFilters = [

@@ -10,9 +10,11 @@ nav { max-width: 1400px; margin: auto; display: flex; align-items: center; justi
 nav ul { display: flex; flex-wrap: wrap; gap: 25px; list-style: none; margin: 0; padding: 0; }
 nav a:hover, nav a:focus-visible { color: #c2915e; }
 nav ul a { color: #fff; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; }
-.hero { isolation: isolate; min-height: min(760px, calc(100vh - 52px)); position: relative; display: grid; align-items: end; padding: 65px 7% 66px; color: #fff; background-color: #41251b; background-position: 78% 52%; background-size: cover; background-repeat: no-repeat; }
-.hero::after { position: absolute; z-index: -1; inset: 0; content: ''; background: radial-gradient(circle at 82% 48%, rgba(175, 113, 77, .14), transparent 34%); }
-.hero-content { max-width: 800px; animation: rise-in .8s ease-out both; }
+.hero { isolation: isolate; min-height: min(760px, calc(100vh - 52px)); position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, .8fr); align-items: end; gap: 40px; overflow: hidden; padding: 65px 7% 66px; color: #fff; background: linear-gradient(118deg, #20120f 0%, #43241a 55%, #75452c 100%); }
+.hero::after { position: absolute; z-index: -1; inset: 0; content: ''; background: radial-gradient(circle at 78% 46%, rgba(218, 161, 110, .32), transparent 0 23%, rgba(0, 0, 0, .08) 58%, transparent 75%); }
+.hero-content { position: relative; z-index: 1; max-width: 800px; animation: rise-in .8s ease-out both; }
+.hero-product { align-self: center; justify-self: center; width: min(100%, 570px); height: min(67vh, 600px); display: grid; place-items: center; padding: 25px; }
+.hero-product img { max-width: 100%; max-height: 100%; display: block; object-fit: contain; filter: drop-shadow(0 34px 28px rgba(0, 0, 0, .36)); transform: translateY(12px); }
 .eyebrow { margin: 0; font-size: 10px; font-weight: 700; letter-spacing: .24em; }
 .hero h1 { max-width: 720px; margin: 18px 0 24px; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(62px, 9.5vw, 132px); font-weight: 400; letter-spacing: -.075em; line-height: .82; }
 .hero h1 span { font-size: .54em; letter-spacing: -.06em; }
@@ -45,8 +47,9 @@ nav ul a { color: #fff; font-size: 10px; font-weight: 700; letter-spacing: .12em
 .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px 22px; }
 .card { overflow: hidden; border: 0; border-radius: 0; background: transparent; transition: transform .3s; }
 .card:hover { transform: translateY(-7px); }
-.image-box { height: 430px; overflow: hidden; border-bottom: 0; background: linear-gradient(145deg, #eddcd5, var(--blush)); box-shadow: inset 0 0 0 1px rgba(94, 55, 39, .06); }
-.image-box img { width: 100%; height: 100%; display: block; object-fit: cover; filter: saturate(.86) sepia(.05) contrast(1.02) brightness(.98); mix-blend-mode: multiply; transition: filter .4s, transform .4s; }
+.image-box { height: 430px; display: grid; place-items: center; overflow: hidden; border-bottom: 0; background: linear-gradient(145deg, #eddcd5, var(--blush)); box-shadow: inset 0 0 0 1px rgba(94, 55, 39, .06); }
+.image-box img { width: 100%; height: 100%; display: block; object-fit: cover; filter: saturate(.86) sepia(.05) contrast(1.02) brightness(.98); transition: filter .4s, transform .4s; }
+.image-box .product-cutout { width: calc(100% - 42px); height: calc(100% - 42px); object-fit: contain; filter: drop-shadow(0 18px 15px rgba(58, 32, 20, .18)); }
 .card:hover .image-box img { filter: saturate(.98) sepia(.03) contrast(1.04) brightness(1); }
 .card:hover img { transform: scale(1.05); }
 .card:nth-child(3n+2) .image-box { height: 510px; }
@@ -77,5 +80,5 @@ footer { padding: 25px; background: var(--dark); color: #fff; font-size: 12px; l
 footer p { margin: 0; }
 @keyframes rise-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
-@media (max-width: 850px) { nav { flex-direction: column; } nav ul { justify-content: center; gap: 15px; } .hero { min-height: 620px; padding-bottom: 48px; } .hero-note { display: none; } .manifesto, .heading { grid-template-columns: 1fr; gap: 22px; } .manifesto { padding-top: 75px; padding-bottom: 75px; } .catalog-tools { align-items: stretch; flex-direction: column; } .product-search input { width: 100%; } .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .about, .assistant { grid-template-columns: 1fr; gap: 25px; } }
-@media (max-width: 550px) { header { padding: 15px 20px; } nav ul { gap: 12px; } nav ul a { font-size: 10px; } .hero { min-height: 570px; padding: 42px 20px; } .hero-index { right: 20px; top: 23px; } .hero h1 { font-size: clamp(58px, 19vw, 80px); } .hero-actions { align-items: flex-start; flex-direction: column; gap: 20px; } .manifesto, .products { padding-left: 20px; padding-right: 20px; } .catalog-status { align-items: flex-start; gap: 12px; flex-direction: column; } .grid { grid-template-columns: 1fr; gap: 38px; } .image-box, .card:nth-child(3n+2) .image-box { height: 420px; } .about { padding: 80px 20px; } .contact { padding: 80px 20px; } .assistant { margin: 0 20px 60px; padding: 36px 25px; } .assistant-controls { flex-direction: column; } }
+@media (max-width: 850px) { nav { flex-direction: column; } nav ul { justify-content: center; gap: 15px; } .hero { min-height: 620px; grid-template-columns: 1fr; padding-bottom: 48px; } .hero-product { position: absolute; z-index: 0; right: 4%; top: 64px; width: 48%; height: 58%; opacity: .42; } .hero-note { display: none; } .manifesto, .heading { grid-template-columns: 1fr; gap: 22px; } .manifesto { padding-top: 75px; padding-bottom: 75px; } .catalog-tools { align-items: stretch; flex-direction: column; } .product-search input { width: 100%; } .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .about, .assistant { grid-template-columns: 1fr; gap: 25px; } }
+@media (max-width: 550px) { header { padding: 15px 20px; } nav ul { gap: 12px; } nav ul a { font-size: 10px; } .hero { min-height: 570px; padding: 42px 20px; } .hero-product { top: 76px; right: -6%; width: 68%; height: 45%; } .hero-index { right: 20px; top: 23px; } .hero h1 { font-size: clamp(58px, 19vw, 80px); } .hero-actions { align-items: flex-start; flex-direction: column; gap: 20px; } .manifesto, .products { padding-left: 20px; padding-right: 20px; } .catalog-status { align-items: flex-start; gap: 12px; flex-direction: column; } .grid { grid-template-columns: 1fr; gap: 38px; } .image-box, .card:nth-child(3n+2) .image-box { height: 420px; } .about { padding: 80px 20px; } .contact { padding: 80px 20px; } .assistant { margin: 0 20px 60px; padding: 36px 25px; } .assistant-controls { flex-direction: column; } }
