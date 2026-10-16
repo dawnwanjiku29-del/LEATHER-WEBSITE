@@ -3,10 +3,12 @@
 import { useMemo, useState } from 'react';
 import { collectionFilters, products } from './products';
 
-const enquiryAddress = 'lookinggoodrugged@example.com';
+const whatsappNumber = '254720929666';
 export default function ProductCollection() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [search, setSearch] = useState('');
+  const [showAll, setShowAll] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const query = search.trim().toLowerCase();
 
   const visibleProducts = useMemo(() => products.filter((product) => {
@@ -19,14 +21,27 @@ export default function ProductCollection() {
   }), [activeFilter, query]);
 
   const hasFilters = activeFilter !== 'all' || search;
-  const resultLabel = `${visibleProducts.length} ${visibleProducts.length === 1 ? 'piece' : 'pieces'} shown`;
+  const displayedProducts = showAll || hasFilters ? visibleProducts : visibleProducts.slice(0, 8);
+  const resultLabel = showAll || hasFilters
+    ? `${visibleProducts.length} ${visibleProducts.length === 1 ? 'piece' : 'pieces'} shown`
+    : '8 featured pieces';
+
+  function productImage(product) {
+    const imageFolder = product.imageNumber >= 19 ? 'cutouts' : 'studio';
+    const imageName = product.imageNumber >= 19 ? `bag${product.imageNumber}.png` : product.image;
+    return `images/optimized/${imageFolder}/${imageName.replace(/\.[^.]+$/, '.webp')}`;
+  }
+
+  function whatsappHref(product) {
+    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hello Looking Good Rugged, I would like to enquire about the ${product.name}. Please share the price and availability.`)}`;
+  }
 
   return (
     <section className="products" id="bags" aria-labelledby="bags-title">
       <div className="heading">
-        <p className="eyebrow">OUR COLLECTION</p>
-        <h2 id="bags-title">Find your<br /><em>everyday piece.</em></h2>
-        <p>Handcrafted leather products with purpose, presence, and room to live in.</p>
+        <p className="eyebrow" id="featured">FEATURED PIECES</p>
+        <h2 id="bags-title">Find the one<br /><em>you’ll reach for.</em></h2>
+        <p>Explore a considered edit, then browse the complete collection when you are ready.</p>
       </div>
 
       <div className="catalog-tools" aria-label="Browse the collection">
@@ -56,34 +71,32 @@ export default function ProductCollection() {
 
       <div className="catalog-status" role="status" aria-live="polite">
         <span>{resultLabel}</span>
-        {hasFilters && <button className="clear-filters" type="button" onClick={() => { setActiveFilter('all'); setSearch(''); }}>Clear filters</button>}
+        <div className="catalog-actions">
+          {!showAll && !hasFilters && <button className="clear-filters" type="button" onClick={() => setShowAll(true)}>View all pieces</button>}
+          {hasFilters && <button className="clear-filters" type="button" onClick={() => { setActiveFilter('all'); setSearch(''); }}>Clear filters</button>}
+        </div>
       </div>
 
-      {visibleProducts.length ? (
+      {displayedProducts.length ? (
         <div className="grid">
-          {visibleProducts.map((product, index) => {
-            const subject = encodeURIComponent(`Enquiry: ${product.name}`);
-            const body = encodeURIComponent(`Hello Looking Good Rugged,\n\nI would like to enquire about the ${product.name}.\n\nThank you.`);
-            const imageFolder = product.imageNumber >= 19 ? 'cutouts' : 'studio';
-            const imageName = product.imageNumber >= 19 ? `bag${product.imageNumber}.png` : product.image;
-            const optimizedImageName = imageName.replace(/\.[^.]+$/, '.webp');
+          {displayedProducts.map((product, index) => {
             return (
               <article className="card" key={product.image}>
-                <div className="image-box">
+                <button className="image-box product-open" type="button" onClick={() => setSelectedProduct(product)} aria-label={`View details for ${product.name}`}>
                   <img
                     className={product.imageNumber >= 19 ? 'product-cutout' : ''}
-                    src={`images/optimized/${imageFolder}/${optimizedImageName}`}
+                    src={productImage(product)}
                     alt={product.name}
                     loading={index < 6 ? 'eager' : 'lazy'}
                     fetchPriority={index < 6 ? 'high' : 'auto'}
                     decoding="async"
                   />
-                </div>
+                </button>
                 <div className="info">
                   <span className="tag">{product.tag}</span>
-                  <h3>{product.name}</h3>
+                  <h3><button className="product-title" type="button" onClick={() => setSelectedProduct(product)}>{product.name}</button></h3>
                   <p>{product.description}</p>
-                  <a className="enquire" href={`mailto:${enquiryAddress}?subject=${subject}&body=${body}`}>Enquire about this bag</a>
+                  <div className="product-actions"><button className="details-link" type="button" onClick={() => setSelectedProduct(product)}>View details</button><a className="enquire" href={whatsappHref(product)}>Enquire on WhatsApp</a></div>
                 </div>
               </article>
             );
@@ -94,6 +107,22 @@ export default function ProductCollection() {
           <h3>No matches yet</h3>
           <p>Try another search or clear the filters to see the full collection.</p>
           <button className="button" type="button" onClick={() => { setActiveFilter('all'); setSearch(''); }}>View all pieces</button>
+        </div>
+      )}
+
+      {selectedProduct && (
+        <div className="product-dialog-backdrop" role="presentation" onMouseDown={() => setSelectedProduct(null)}>
+          <section className="product-dialog" role="dialog" aria-modal="true" aria-labelledby="product-dialog-title" onMouseDown={(event) => event.stopPropagation()}>
+            <button className="dialog-close" type="button" onClick={() => setSelectedProduct(null)} aria-label="Close product details">×</button>
+            <div className="dialog-image"><img src={productImage(selectedProduct)} alt={selectedProduct.name} /></div>
+            <div className="dialog-content">
+              <p className="eyebrow">{selectedProduct.tag}</p>
+              <h3 id="product-dialog-title">{selectedProduct.name}</h3>
+              <p>{selectedProduct.description}</p>
+              <dl className="product-facts"><div><dt>Ordering</dt><dd>Price and availability on request</dd></div><div><dt>Collection</dt><dd>{selectedProduct.category}</dd></div><div><dt>Care</dt><dd>Ask us for leather-care guidance</dd></div></dl>
+              <a className="button" href={whatsappHref(selectedProduct)}>Ask on WhatsApp</a>
+            </div>
+          </section>
         </div>
       )}
     </section>

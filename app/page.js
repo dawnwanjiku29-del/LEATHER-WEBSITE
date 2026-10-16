@@ -1,19 +1,18 @@
 import ShoppingAssistant from './shopping-assistant';
 import ProductCollection from './product-collection';
-import Link from 'next/link';
 
 export default function Home() {
   return (
     <>
+      <div className="announcement" role="status">Handcrafted in Nairobi · Enquire on WhatsApp for availability</div>
       <header>
         <nav aria-label="Primary navigation">
           <a className="logo" href="#home">LOOKING GOOD <span>RUGGED</span></a>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#bags">Bags</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#bags">Shop</a></li>
+            <li><a href="#featured">Featured</a></li>
+            <li><a href="#about">Our story</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><Link href="/admin">Admin</Link></li>
           </ul>
         </nav>
       </header>
@@ -24,10 +23,10 @@ export default function Home() {
           <div className="hero-content">
             <p className="eyebrow">AUTHENTIC LEATHER COLLECTION</p>
             <h1><span>Carry the</span><br />character.</h1>
-            <p>Leather bags with the strength to work hard and the presence to be remembered.</p>
+            <p>Purposeful leather pieces for the workday, the weekend, and every road in between.</p>
             <div className="hero-actions">
-              <a href="#bags" className="button">Explore the collection <span aria-hidden="true">↘</span></a>
-              <a href="#about" className="text-link">Our point of view <span aria-hidden="true">↘</span></a>
+              <a href="#featured" className="button">Shop featured pieces <span aria-hidden="true">↘</span></a>
+              <a href="#about" className="text-link">Meet the makers <span aria-hidden="true">↘</span></a>
             </div>
           </div>
           <div className="hero-product" aria-hidden="true">
@@ -39,35 +38,41 @@ export default function Home() {
         <section className="manifesto" aria-label="Our approach">
           <p className="eyebrow">01 — THE MATERIAL</p>
           <p className="manifesto-copy">The marks of use are not an afterthought. They are part of the design.</p>
-          <p className="manifesto-detail">A considered collection of leather pieces for work, travel, and the stories in between.</p>
+          <p className="manifesto-detail">Designed to become part of your routine—then part of your story.</p>
         </section>
 
         <ProductCollection />
 
         <ShoppingAssistant />
 
+        <section className="service-promises" aria-label="Why shop with us">
+          <article><span>01</span><h2>Made with purpose</h2><p>Considered leather pieces with useful details and enduring character.</p></article>
+          <article><span>02</span><h2>Personal ordering</h2><p>Chat directly with us to confirm availability, colour and the right fit.</p></article>
+          <article><span>03</span><h2>Care beyond checkout</h2><p>Ask us how to care for your piece so it can travel with you for years.</p></article>
+        </section>
+
         <section className="about" id="about">
           <div>
-            <p className="eyebrow">ABOUT US</p>
-            <h2>Made to Look Good.<br />Built to Last.</h2>
+            <p className="eyebrow">OUR STORY</p>
+            <h2>Made for the<br />life you lead.</h2>
           </div>
-          <p>Looking Good Rugged creates practical and stylish leather products designed for everyday life, work and travel. Our collection combines strong construction with a classic rugged appearance.</p>
+          <div className="story-copy"><p>Looking Good Rugged makes practical, expressive leather pieces for people who carry their day with them. Every bag is selected for its utility, warm material character and ability to settle beautifully into everyday life.</p><a href="#contact" className="text-link">Ask about a custom order <span aria-hidden="true">↘</span></a></div>
         </section>
 
         <section className="contact" id="contact" aria-labelledby="contact-title">
           <p className="eyebrow">GET IN TOUCH</p>
           <h2 id="contact-title">Find Your Rugged Look</h2>
-          <p>Contact us to place an order or ask about our leather collection.</p>
+          <p>Message us for prices, availability, delivery options, and custom order requests.</p>
           <div className="contact-box">
-            <p><strong>Email:</strong> <a href="mailto:lookinggoodrugged@example.com">lookinggoodrugged@example.com</a></p>
             <p><strong>Phone:</strong> <a href="tel:+254720929666">+254 720 929 666</a></p>
             <p><strong>Location:</strong> Nairobi, Kenya</p>
+            <p><strong>Ordering:</strong> WhatsApp or call us directly</p>
           </div>
-          <a className="button" href="mailto:lookinggoodrugged@example.com">EMAIL US</a>
+          <a className="button" href="https://wa.me/254720929666?text=Hello%20Looking%20Good%20Rugged%2C%20I%20would%20like%20to%20make%20an%20enquiry.">CHAT ON WHATSAPP</a>
         </section>
       </main>
 
-      <footer><p>© 2026 Looking Good Rugged. All Rights Reserved.</p></footer>
+      <footer><p>© 2026 Looking Good Rugged. Handcrafted in Nairobi.</p></footer>
     </>
   );
 }
