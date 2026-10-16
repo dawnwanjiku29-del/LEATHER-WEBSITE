@@ -61,19 +61,21 @@ export default function ProductCollection() {
 
       {visibleProducts.length ? (
         <div className="grid">
-          {visibleProducts.map((product) => {
+          {visibleProducts.map((product, index) => {
             const subject = encodeURIComponent(`Enquiry: ${product.name}`);
             const body = encodeURIComponent(`Hello Looking Good Rugged,\n\nI would like to enquire about the ${product.name}.\n\nThank you.`);
             const imageFolder = product.imageNumber >= 19 ? 'cutouts' : 'studio';
             const imageName = product.imageNumber >= 19 ? `bag${product.imageNumber}.png` : product.image;
+            const optimizedImageName = imageName.replace(/\.[^.]+$/, '.webp');
             return (
               <article className="card" key={product.image}>
                 <div className="image-box">
                   <img
                     className={product.imageNumber >= 19 ? 'product-cutout' : ''}
-                    src={`images/${imageFolder}/${imageName}`}
+                    src={`images/optimized/${imageFolder}/${optimizedImageName}`}
                     alt={product.name}
-                    loading="lazy"
+                    loading={index < 6 ? 'eager' : 'lazy'}
+                    fetchPriority={index < 6 ? 'high' : 'auto'}
                     decoding="async"
                   />
                 </div>
