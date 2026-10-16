@@ -47,8 +47,8 @@ nav ul a { color: #fff; font-size: 10px; font-weight: 700; letter-spacing: .12em
 .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px 22px; }
 .card { overflow: hidden; border: 0; border-radius: 0; background: transparent; transition: transform .3s; }
 .card:hover { transform: translateY(-7px); }
-.image-box { height: 430px; display: grid; place-items: center; overflow: hidden; border-bottom: 0; background: linear-gradient(145deg, #eddcd5, var(--blush)); box-shadow: inset 0 0 0 1px rgba(94, 55, 39, .06); }
-.image-box img { width: 100%; height: 100%; display: block; object-fit: cover; filter: saturate(.86) sepia(.05) contrast(1.02) brightness(.98); transition: filter .4s, transform .4s; }
+.image-box { height: 430px; display: grid; place-items: center; overflow: hidden; border-bottom: 0; background: var(--cream); box-shadow: inset 0 0 0 1px rgba(94, 55, 39, .06); }
+.image-box img { width: 100%; height: 100%; display: block; object-fit: contain; filter: saturate(.86) sepia(.05) contrast(1.02) brightness(.98); transition: filter .4s, transform .4s; }
 .image-box .product-cutout { width: calc(100% - 42px); height: calc(100% - 42px); object-fit: contain; filter: drop-shadow(0 18px 15px rgba(58, 32, 20, .18)); }
 .card:hover .image-box img { filter: saturate(.98) sepia(.03) contrast(1.04) brightness(1); }
 .card:hover img { transform: scale(1.05); }
@@ -78,6 +78,23 @@ nav ul a { color: #fff; font-size: 10px; font-weight: 700; letter-spacing: .12em
 .contact-box a { color: #704725; font-weight: 700; text-decoration-color: #c2915e; text-underline-offset: 3px; }
 footer { padding: 25px; background: var(--dark); color: #fff; font-size: 12px; letter-spacing: .08em; text-align: center; text-transform: uppercase; }
 footer p { margin: 0; }
+.admin-page { min-height: 100vh; background: var(--cream); }
+.admin-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 7%; background: #211713; }
+.admin-back { color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+.admin-back:hover, .admin-back:focus-visible { color: #c2915e; }
+.admin-intro, .admin-panel { max-width: 1180px; margin: 0 auto; padding-left: 7%; padding-right: 7%; }
+.admin-intro { padding-top: 92px; padding-bottom: 54px; }
+.admin-intro h1 { max-width: 720px; margin: 12px 0 15px; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(50px, 7vw, 92px); font-weight: 400; letter-spacing: -.065em; line-height: .9; }
+.admin-intro > p:last-child { max-width: 500px; margin: 0; color: #6b625b; font-size: 17px; }
+.admin-panel { padding-bottom: 92px; }
+.admin-panel-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 28px; }
+.admin-panel h2 { margin: 8px 0 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(29px, 4vw, 46px); font-weight: 400; letter-spacing: -.045em; line-height: 1; }
+.admin-table-wrap { overflow-x: auto; border: 1px solid #ddd2c7; background: var(--card); }
+.admin-table-wrap table { width: 100%; border-collapse: collapse; min-width: 620px; text-align: left; }
+.admin-table-wrap th, .admin-table-wrap td { padding: 16px 20px; border-bottom: 1px solid #e5ddd5; }
+.admin-table-wrap th { color: #6b625b; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+.admin-table-wrap td { font-size: 14px; }
+.admin-table-wrap tr:last-child td { border-bottom: 0; }
 @keyframes rise-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
 @media (max-width: 850px) { nav { flex-direction: column; } nav ul { justify-content: center; gap: 15px; } .hero { min-height: 620px; grid-template-columns: 1fr; padding-bottom: 48px; } .hero-product { position: absolute; z-index: 0; right: 4%; top: 64px; width: 48%; height: 58%; opacity: .42; } .hero-note { display: none; } .manifesto, .heading { grid-template-columns: 1fr; gap: 22px; } .manifesto { padding-top: 75px; padding-bottom: 75px; } .catalog-tools { align-items: stretch; flex-direction: column; } .product-search input { width: 100%; } .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .about, .assistant { grid-template-columns: 1fr; gap: 25px; } }

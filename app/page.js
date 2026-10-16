@@ -1,5 +1,6 @@
 import ShoppingAssistant from './shopping-assistant';
 import ProductCollection from './product-collection';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
             <li><a href="#bags">Bags</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><Link href="/admin">Admin</Link></li>
           </ul>
         </nav>
       </header>
