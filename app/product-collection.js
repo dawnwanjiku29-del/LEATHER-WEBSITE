@@ -87,8 +87,8 @@ export default function ProductCollection() {
                     className={product.imageNumber >= 19 ? 'product-cutout' : ''}
                     src={productImage(product)}
                     alt={product.name}
-                    loading={index < 6 ? 'eager' : 'lazy'}
-                    fetchPriority={index < 6 ? 'high' : 'auto'}
+                    loading="eager"
+                    fetchPriority={index < 3 ? 'high' : 'low'}
                     decoding="async"
                   />
                 </button>

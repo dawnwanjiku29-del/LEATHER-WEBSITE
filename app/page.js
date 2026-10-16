@@ -30,7 +30,13 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-product" aria-hidden="true">
-            <img src="images/cutouts/bag20.png" alt="" />
+            <img
+              src="images/optimized/cutouts/bag20.webp"
+              alt=""
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+            />
           </div>
           <p className="hero-note">Made for the everyday<br />and the long way round.</p>
         </section>
