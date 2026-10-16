@@ -64,9 +64,8 @@ export default function Home() {
           <h2 id="contact-title">Find Your Rugged Look</h2>
           <p>Message us for prices, availability, delivery options, and custom order requests.</p>
           <div className="contact-box">
-            <p><strong>Phone:</strong> <a href="tel:+254720929666">+254 720 929 666</a></p>
             <p><strong>Location:</strong> Nairobi, Kenya</p>
-            <p><strong>Ordering:</strong> WhatsApp or call us directly</p>
+            <p><strong>Ordering:</strong> Chat with us directly on WhatsApp</p>
           </div>
           <a className="button" href="https://wa.me/254720929666?text=Hello%20Looking%20Good%20Rugged%2C%20I%20would%20like%20to%20make%20an%20enquiry.">CHAT ON WHATSAPP</a>
         </section>
