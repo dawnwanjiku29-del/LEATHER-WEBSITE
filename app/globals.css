@@ -1,13 +1,14 @@
 :root { --ink: #2c211a; --dark: #1e1613; --about: #2b2b2a; --tan: #ae7045; --cream: #f7f2ed; --card: #fffaf6; --blush: #e8d5ce; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--cream); color: var(--ink); font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; }
 a { color: inherit; }
 .announcement { padding: 9px 20px; background: #b46f3f; color: #fff9f2; font-size: 10px; font-weight: 700; letter-spacing: .13em; text-align: center; text-transform: uppercase; }
 header { background: #211713; padding: 14px 5%; position: sticky; top: 0; z-index: 10; }
 nav { max-width: 1400px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.logo { color: #fff; font-size: 10px; font-weight: 700; letter-spacing: .18em; text-decoration: none; white-space: nowrap; }
-.logo span, .eyebrow, .tag { color: #c2915e; }
+.logo { color: #fff; font-family: Georgia, 'Times New Roman', serif; font-size: 14px; font-weight: 400; letter-spacing: .08em; text-decoration: none; white-space: nowrap; }
+.logo span { color: #c2915e; font-size: 16px; font-style: italic; }
+.eyebrow, .tag { color: #c2915e; }
 nav ul { display: flex; flex-wrap: wrap; gap: 25px; list-style: none; margin: 0; padding: 0; }
 nav a:hover, nav a:focus-visible { color: #c2915e; }
 nav ul a { color: #fff; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; }
@@ -36,7 +37,7 @@ nav ul a { color: #fff; font-size: 10px; font-weight: 700; letter-spacing: .12em
 .hero-product { align-self: center; justify-self: center; width: min(100%, 570px); height: min(67vh, 600px); display: grid; place-items: center; padding: 25px; }
 .hero-product img { max-width: 100%; max-height: 100%; display: block; object-fit: contain; filter: drop-shadow(0 34px 28px rgba(0, 0, 0, .36)); transform: translateY(12px); }
 .eyebrow { margin: 0; font-size: 10px; font-weight: 700; letter-spacing: .24em; }
-.hero h1 { max-width: 720px; margin: 18px 0 24px; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(62px, 9.5vw, 132px); font-weight: 400; letter-spacing: -.075em; line-height: .82; }
+.hero h1 { max-width: 720px; margin: 18px 0 24px; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(52px, 7.5vw, 96px); font-weight: 400; letter-spacing: -.065em; line-height: .88; }
 .hero h1 span { font-size: .54em; letter-spacing: -.06em; }
 .hero p:not(.eyebrow) { max-width: 430px; font-size: 17px; margin: 0 0 30px; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 26px; }
@@ -76,7 +77,7 @@ nav ul a { color: #fff; font-size: 10px; font-weight: 700; letter-spacing: .12em
 .card:nth-child(3n+2) .image-box { height: 510px; }
 .info { padding: 18px 0 0; }
 .tag { font-size: 11px; font-weight: 700; letter-spacing: 2px; }
-.info h3 { margin: 5px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 26px; font-weight: 400; letter-spacing: -.035em; line-height: 1.05; }
+.info h3 { margin: 5px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 26px; font-style: italic; font-weight: 400; letter-spacing: -.035em; line-height: 1.05; }
 .product-title { border: 0; background: transparent; color: inherit; cursor: pointer; font: inherit; padding: 0; text-align: left; }
 .product-title:hover, .product-title:focus-visible { color: #704725; text-decoration: underline; text-decoration-color: #c2915e; text-underline-offset: 4px; }
 .info p { min-height: 0; margin: 0 0 16px; color: #6b625b; font-size: 14px; }
