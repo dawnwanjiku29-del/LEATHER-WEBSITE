@@ -4,15 +4,11 @@ import { useMemo, useState } from 'react';
 import { collectionFilters, products } from './products';
 
 const whatsappNumber = '254720929666';
-const priceFormatter = new Intl.NumberFormat('en-KE', {
-  style: 'currency',
-  currency: 'KES',
-  currencyDisplay: 'narrowSymbol',
-  maximumFractionDigits: 0
-});
+const priceFormatter = new Intl.NumberFormat('en-KE', { maximumFractionDigits: 0 });
+const availableColours = 'Tan, Brown, and Mocha';
 
 function productPrice(product) {
-  return product.price ? `${priceFormatter.format(product.price)}${product.priceNote ? ` ${product.priceNote}` : ''}` : 'Price on request';
+  return product.price ? `KSh ${priceFormatter.format(product.price)}${product.priceNote ? ` ${product.priceNote}` : ''}` : 'Price on request';
 }
 
 export default function ProductCollection() {
@@ -39,12 +35,14 @@ export default function ProductCollection() {
 
   function productImage(product) {
     const imageFolder = product.imageNumber >= 19 ? 'cutouts' : 'studio';
-    const imageName = product.imageNumber >= 19 ? `bag${product.imageNumber}.png` : product.image;
-    return `images/optimized/${imageFolder}/${imageName.replace(/\.[^.]+$/, '.webp')}`;
+    const imageName = product.imageNumber >= 19
+      ? `bag${product.imageNumber}${product.imageNumber >= 29 ? '.png' : '.webp'}`
+      : product.image.replace(/\.[^.]+$/, '.webp');
+    return `images/optimized/${imageFolder}/${imageName}`;
   }
 
   function whatsappHref(product) {
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hello Looking Good Rugged, I would like to enquire about the ${product.name} (${productPrice(product)}). Please share the availability.`)}`;
+    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hello Looking Good Rugged, I would like to enquire about the ${product.name} (${productPrice(product)}). Please share the availability and colour options: ${availableColours}.`)}`;
   }
 
   return (
@@ -131,7 +129,7 @@ export default function ProductCollection() {
               <p className="eyebrow">{selectedProduct.tag}</p>
               <h3 id="product-dialog-title">{selectedProduct.name}</h3>
               <p>{selectedProduct.description}</p>
-              <dl className="product-facts"><div><dt>Price</dt><dd>{productPrice(selectedProduct)}</dd></div><div><dt>Collection</dt><dd>{selectedProduct.category}</dd></div><div><dt>Care</dt><dd>Ask us for leather-care guidance</dd></div></dl>
+              <dl className="product-facts"><div><dt>Price</dt><dd>{productPrice(selectedProduct)}</dd></div><div><dt>Colours</dt><dd>{availableColours}</dd></div><div><dt>Collection</dt><dd>{selectedProduct.category}</dd></div><div><dt>Care</dt><dd>Ask us for leather-care guidance</dd></div></dl>
               <a className="button" href={whatsappHref(selectedProduct)}>Ask on WhatsApp</a>
             </div>
           </section>

@@ -7,7 +7,7 @@ export const products = [
   { image: 'bag8.png', tag: 'PORTFOLIO', category: 'work', name: 'Document Holder', price: 16500, description: 'A clean leather folder for documents and essentials.' },
   { image: 'bag9.png', tag: 'TOTE BAG', category: 'everyday', name: 'Premium Leather Tote', price: 18000, description: 'Spacious and stylish for work or daily use.' },
   { image: 'bag10.png', tag: 'CARRY BAG', category: 'everyday', name: 'Alpha Rama', price: 26000, description: 'A rugged design built for everyday carrying.' },
-  { image: 'bag11.png', tag: 'ACCESSORY', category: 'accessories', name: 'Leatherman Holder', price: 3000, description: 'A handcrafted leather holder for your phone and small essentials.' },
+  { image: 'bag29.png', imageNumber: 29, tag: 'ACCESSORY', category: 'accessories', name: 'Leather Cutlery Holder', price: 3000, description: 'A handcrafted leather holder for carrying utensils and small essentials.' },
   { image: 'bag12.png', tag: 'BIKER SEAT', category: 'accessories', name: 'Handcrafted Leather Seats', price: 18000, description: 'Handcrafted leather seats designed for bikers, with decorative stitching.' },
   { image: 'bag13.png', tag: 'BACKPACK', category: 'travel', name: 'Rugged Everyday Backpack', price: 9800, description: 'A practical backpack designed for everyday carrying and travel.' },
   { image: 'bag15.png', tag: 'ACCESSORY', category: 'accessories', name: 'Clutch Bag', price: 7500, description: 'A stylish handmade leather clutch with colourful beadwork.' },
@@ -22,7 +22,11 @@ export const products = [
   { image: 'bag25.png', imageNumber: 25, tag: 'SHOULDER BAG', category: 'everyday', name: 'Canvas Leather Crossbody', price: 3800, description: 'A compact canvas-and-leather piece with secure zip storage.' },
   { image: 'bag26.png', imageNumber: 26, tag: 'SLING BAG', category: 'everyday', name: 'Tan Leather Sling Collection', price: 7500, priceNote: 'each', description: 'Three compact sling styles for essentials and hands-free movement.' },
   { image: 'bag27.png', imageNumber: 27, tag: 'PASSPORT HOLDER', category: 'accessories', name: 'Passport Holder', price: 3800, description: 'A slim leather passport holder with a softly weathered natural finish.' },
-  { image: 'bag28.jpeg', imageNumber: 28, tag: 'LUNCH CARRIER', category: 'accessories', name: 'Lunch Carrier', price: 5500, description: 'A practical zip-top food carrier with front pockets for everyday meals.' }
+  { image: 'bag28.jpeg', imageNumber: 28, tag: 'LUNCH CARRIER', category: 'accessories', name: 'Lunch Carrier', price: 5500, description: 'A practical zip-top food carrier with front pockets for everyday meals.' },
+  { image: 'bag30.png', imageNumber: 30, tag: 'BELT', category: 'accessories', name: 'Leather Belt', price: 2600, description: 'A durable leather belt finished with a classic brass buckle.' },
+  { image: 'bag31.png', imageNumber: 31, tag: 'WOMEN\'S PURSE', category: 'accessories', name: 'Women\'s Leather Purse', price: 3500, description: 'A compact leather purse with a curved flap and brass snap closure.' },
+  { image: 'bag32.png', imageNumber: 32, tag: 'WALLET', category: 'accessories', name: 'Classic Leather Wallet', price: 3200, description: 'A slim tan leather wallet with hand-finished stitching.' },
+  { image: 'bag33.png', imageNumber: 33, tag: 'AXE CASE', category: 'accessories', name: 'Axe Leather Casing', price: 3000, description: 'A rugged leather casing and belt rig for carrying an axe securely.' }
 ];
 
 export const collectionFilters = [

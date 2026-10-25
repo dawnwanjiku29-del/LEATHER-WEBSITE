@@ -2,7 +2,7 @@ const collections = {
   travel: ['Rugged Travel Duffle', 'Tan Leather Travel Duffel', 'Rugged Everyday Backpack'],
   work: ['Rugged Leather Briefcase', 'Classic Leather Satchel', 'Document Holder'],
   everyday: ['Leather Shoulder Bag', 'Saturn', 'Premium Leather Tote'],
-  accessory: ['Leatherman Holder', 'Clutch Bag', 'Passport Holder']
+  accessory: ['Leather Cutlery Holder', 'Clutch Bag', 'Passport Holder']
 };
 
 /**
