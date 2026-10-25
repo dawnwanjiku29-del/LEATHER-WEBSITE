@@ -45,7 +45,7 @@ export default function Home() {
 
         <section className="service-promises" aria-label="Why shop with us">
           <article><span>01</span><h2>Made with purpose</h2><p>Considered leather pieces with useful details and enduring character.</p></article>
-          <article><span>02</span><h2>Personal ordering</h2><p>Chat directly with us to confirm availability, colour and the right fit.</p></article>
+          <article><span>02</span><h2>Personal ordering</h2><p>Chat directly with us to place your order; it takes approximately two weeks.</p></article>
           <article><span>03</span><h2>Care beyond checkout</h2><p>Ask us how to care for your piece so it can travel with you for years.</p></article>
         </section>
 
@@ -96,9 +96,10 @@ export default function Home() {
           <div className="contact-box">
             <p><strong>Location:</strong> Nairobi, Kenya</p>
             <p><strong>Ordering:</strong> Chat with us directly on WhatsApp</p>
+            <p><strong>Order time:</strong> Approximately two weeks</p>
             <p><strong>Payment:</strong> Pay on delivery</p>
           </div>
-          <a className="button" href="https://wa.me/254720929666?text=Hello%20Looking%20Good%20Rugged%2C%20I%20would%20like%20to%20make%20an%20enquiry.">CHAT ON WHATSAPP</a>
+          <a className="button" href="https://wa.me/254720929666?text=Hello%20Looking%20Good%20Rugged%2C%20I%20would%20like%20to%20place%20an%20order.">PLACE YOUR ORDER</a>
         </section>
       </main>
 

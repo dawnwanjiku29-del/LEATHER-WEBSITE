@@ -43,7 +43,7 @@ export default function ProductCollection() {
   }
 
   function whatsappHref(product) {
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hello Looking Good Rugged, I would like to enquire about the ${product.name} (${productPrice(product)}). Please share the availability and colour options: ${availableColours}.`)}`;
+    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hello Looking Good Rugged, I would like to place an order for the ${product.name} (${productPrice(product)}). Please confirm availability and colour options: ${availableColours}.`)}`;
   }
 
   return (
@@ -107,7 +107,7 @@ export default function ProductCollection() {
                   <h3><button className="product-title" type="button" onClick={() => setSelectedProduct(product)}>{product.name}</button></h3>
                   <p className="product-price">{productPrice(product)}</p>
                   <p>{product.description}</p>
-                  <div className="product-actions"><button className="details-link" type="button" onClick={() => setSelectedProduct(product)}>View details</button><a className="enquire" href={whatsappHref(product)}>Enquire on WhatsApp</a></div>
+                  <div className="product-actions"><button className="details-link" type="button" onClick={() => setSelectedProduct(product)}>View details</button><a className="enquire" href={whatsappHref(product)}>Place your order</a></div>
                 </div>
               </article>
             );
@@ -130,8 +130,8 @@ export default function ProductCollection() {
               <p className="eyebrow">{selectedProduct.tag}</p>
               <h3 id="product-dialog-title">{selectedProduct.name}</h3>
               <p>{selectedProduct.description}</p>
-              <dl className="product-facts"><div><dt>Price</dt><dd>{productPrice(selectedProduct)}</dd></div><div><dt>Payment</dt><dd>Pay on delivery</dd></div><div><dt>Colours</dt><dd>{availableColours}</dd></div><div><dt>Dimensions</dt><dd>Ask us for the exact W × H × D</dd></div><div><dt>Collection</dt><dd>{selectedProduct.category}</dd></div><div><dt>Care</dt><dd>Ask us for leather-care guidance</dd></div></dl>
-              <a className="button" href={whatsappHref(selectedProduct)}>Ask on WhatsApp</a>
+              <dl className="product-facts"><div><dt>Price</dt><dd>{productPrice(selectedProduct)}</dd></div><div><dt>Payment</dt><dd>Pay on delivery</dd></div><div><dt>Order time</dt><dd>Approximately two weeks</dd></div><div><dt>Colours</dt><dd>{availableColours}</dd></div><div><dt>Dimensions</dt><dd>Ask us for the exact W × H × D</dd></div><div><dt>Collection</dt><dd>{selectedProduct.category}</dd></div><div><dt>Care</dt><dd>Ask us for leather-care guidance</dd></div></dl>
+              <a className="button" href={whatsappHref(selectedProduct)}>Place your order</a>
             </div>
           </section>
         </div>
