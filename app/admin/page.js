@@ -11,8 +11,7 @@ const team = [
 ];
 const orders = [
   { id: 'LGR-2048', customer: 'Grace W.', item: 'Double-Buckle Briefcase', value: 'KSh 16,500', state: 'Ready to pack' },
-  { id: 'LGR-2047', customer: 'Elias K.', item: 'Tan Leather Weekender', value: 'KSh 18,900', state: 'Awaiting payment' },
-  { id: 'LGR-2046', customer: 'Nia M.', item: 'Beaded Leather Wristlet', value: 'KSh 4,800', state: 'In the studio' }
+  { id: 'LGR-2047', customer: 'Elias K.', item: 'Tan Leather Weekender', value: 'KSh 18,900', state: 'Awaiting payment' }
 ];
 const categoryOrder = ['work', 'travel', 'everyday', 'accessories'];
 
