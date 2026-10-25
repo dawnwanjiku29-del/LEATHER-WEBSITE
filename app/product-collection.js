@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import { collectionFilters, products } from './products';
+import { assetPath } from './asset-path';
 
 const whatsappNumber = '254720929666';
 const priceFormatter = new Intl.NumberFormat('en-KE', { maximumFractionDigits: 0 });
@@ -38,7 +39,7 @@ export default function ProductCollection() {
     const imageName = product.imageNumber >= 19
       ? `bag${product.imageNumber}${product.imageNumber >= 29 ? '.png' : '.webp'}`
       : product.image.replace(/\.[^.]+$/, '.webp');
-    return `images/optimized/${imageFolder}/${imageName}`;
+    return assetPath(`images/optimized/${imageFolder}/${imageName}`);
   }
 
   function whatsappHref(product) {

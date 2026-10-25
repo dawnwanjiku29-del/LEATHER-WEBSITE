@@ -1,21 +1,13 @@
 import ShoppingAssistant from './shopping-assistant';
 import ProductCollection from './product-collection';
+import Link from 'next/link';
+import { assetPath } from './asset-path';
+import { SiteFooter, SiteHeader } from './site-chrome';
 
 export default function Home() {
   return (
     <>
-      <div className="announcement" role="status">Handcrafted in Nairobi · Enquire on WhatsApp for availability</div>
-      <header>
-        <nav aria-label="Primary navigation">
-          <a className="logo" href="#home">LOOKING GOOD <span>RUGGED</span></a>
-          <ul>
-            <li><a href="#bags">Shop</a></li>
-            <li><a href="#featured">Featured</a></li>
-            <li><a href="#about">Our story</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <main>
         <section className="hero" id="home">
@@ -25,13 +17,13 @@ export default function Home() {
             <h1><span>Carry the</span><br />character.</h1>
             <p>Purposeful leather pieces for the workday, the weekend, and every road in between.</p>
             <div className="hero-actions">
-              <a href="#featured" className="button">Shop featured pieces <span aria-hidden="true">↘</span></a>
-              <a href="#about" className="text-link">Meet the makers <span aria-hidden="true">↘</span></a>
+              <Link href="/featured" className="button">Shop featured pieces <span aria-hidden="true">↘</span></Link>
+              <Link href="/story" className="text-link">Meet the makers <span aria-hidden="true">↘</span></Link>
             </div>
           </div>
           <div className="hero-product" aria-hidden="true">
             <img
-              src="images/optimized/cutouts/bag20.webp"
+              src={assetPath('images/optimized/cutouts/bag20.webp')}
               alt=""
               loading="eager"
               fetchPriority="high"
@@ -62,7 +54,7 @@ export default function Home() {
             <p className="eyebrow">OUR STORY</p>
             <h2>Made for the<br />life you lead.</h2>
           </div>
-          <div className="story-copy"><p>Looking Good Rugged makes practical, expressive leather pieces for people who carry their day with them. Every bag is selected for its utility, warm material character and ability to settle beautifully into everyday life.</p><a href="#contact" className="text-link">Ask about a custom order <span aria-hidden="true">↘</span></a></div>
+          <div className="story-copy"><p>Looking Good Rugged makes practical, expressive leather pieces for people who carry their day with them. Every bag is selected for its utility, warm material character and ability to settle beautifully into everyday life.</p><Link href="/contact" className="text-link">Ask about a custom order <span aria-hidden="true">↘</span></Link></div>
         </section>
 
         <section className="contact" id="contact" aria-labelledby="contact-title">
@@ -77,7 +69,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer><p>© 2026 Looking Good Rugged. Handcrafted in Nairobi.</p></footer>
+      <SiteFooter />
     </>
   );
 }
