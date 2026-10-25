@@ -130,7 +130,7 @@ export default function ProductCollection() {
               <p className="eyebrow">{selectedProduct.tag}</p>
               <h3 id="product-dialog-title">{selectedProduct.name}</h3>
               <p>{selectedProduct.description}</p>
-              <dl className="product-facts"><div><dt>Price</dt><dd>{productPrice(selectedProduct)}</dd></div><div><dt>Colours</dt><dd>{availableColours}</dd></div><div><dt>Collection</dt><dd>{selectedProduct.category}</dd></div><div><dt>Care</dt><dd>Ask us for leather-care guidance</dd></div></dl>
+              <dl className="product-facts"><div><dt>Price</dt><dd>{productPrice(selectedProduct)}</dd></div><div><dt>Payment</dt><dd>Pay on delivery</dd></div><div><dt>Colours</dt><dd>{availableColours}</dd></div><div><dt>Dimensions</dt><dd>Ask us for the exact W × H × D</dd></div><div><dt>Collection</dt><dd>{selectedProduct.category}</dd></div><div><dt>Care</dt><dd>Ask us for leather-care guidance</dd></div></dl>
               <a className="button" href={whatsappHref(selectedProduct)}>Ask on WhatsApp</a>
             </div>
           </section>

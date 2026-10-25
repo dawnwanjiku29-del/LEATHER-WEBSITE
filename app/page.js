@@ -49,6 +49,38 @@ export default function Home() {
           <article><span>03</span><h2>Care beyond checkout</h2><p>Ask us how to care for your piece so it can travel with you for years.</p></article>
         </section>
 
+        <section className="order-journey" aria-labelledby="order-journey-title">
+          <div className="order-journey-heading">
+            <p className="eyebrow">CUSTOM ORDERS</p>
+            <h2 id="order-journey-title">A considered piece starts with a conversation.</h2>
+          </div>
+          <ol>
+            <li><span>01</span><h3>Choose your direction</h3><p>Tell us the style, colour and purpose you have in mind.</p></li>
+            <li><span>02</span><h3>Confirm the details</h3><p>We confirm availability, options, dimensions and delivery with you directly.</p></li>
+            <li><span>03</span><h3>Pay on delivery</h3><p>Your order is paid for when it arrives.</p></li>
+          </ol>
+          <Link href="/contact" className="text-link order-journey-link">Start an enquiry <span aria-hidden="true">↘</span></Link>
+        </section>
+
+        <section className="gift-callout" aria-labelledby="gift-title">
+          <img src={assetPath('images/optimized/studio/bag15.webp')} alt="Handcrafted leather clutch bag" loading="lazy" decoding="async" />
+          <div>
+            <p className="eyebrow">GIFTING &amp; CORPORATE ORDERS</p>
+            <h2 id="gift-title">Give something made to be carried.</h2>
+            <p>For a milestone, a team, or a client: ask us about a leather gift or a larger order.</p>
+            <Link href="/contact" className="button">Plan an order <span aria-hidden="true">↘</span></Link>
+          </div>
+        </section>
+
+        <section className="journal-preview" aria-labelledby="journal-title">
+          <div className="journal-heading"><p className="eyebrow">THE LEATHER JOURNAL</p><h2 id="journal-title">Useful notes for a life in leather.</h2><Link href="/journal" className="text-link journal-link">Read the journal <span aria-hidden="true">↘</span></Link></div>
+          <div className="journal-cards">
+            <article><span>01</span><h3>Care that lets leather age well.</h3><p>Simple habits that help preserve the character of a piece you use often.</p></article>
+            <article><span>02</span><h3>Choosing a bag for the way you move.</h3><p>Start with what you carry, where you go and how you want it to feel.</p></article>
+            <article><span>03</span><h3>Patina is a record of use.</h3><p>Why the marks, tone and softness that develop over time are worth keeping.</p></article>
+          </div>
+        </section>
+
         <section className="about" id="about">
           <div>
             <p className="eyebrow">OUR STORY</p>
@@ -64,6 +96,7 @@ export default function Home() {
           <div className="contact-box">
             <p><strong>Location:</strong> Nairobi, Kenya</p>
             <p><strong>Ordering:</strong> Chat with us directly on WhatsApp</p>
+            <p><strong>Payment:</strong> Pay on delivery</p>
           </div>
           <a className="button" href="https://wa.me/254720929666?text=Hello%20Looking%20Good%20Rugged%2C%20I%20would%20like%20to%20make%20an%20enquiry.">CHAT ON WHATSAPP</a>
         </section>

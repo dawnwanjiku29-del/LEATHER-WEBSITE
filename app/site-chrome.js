@@ -11,6 +11,7 @@ export function SiteHeader() {
             <li><Link href="/shop">Shop</Link></li>
             <li><Link href="/featured">Featured</Link></li>
             <li><Link href="/story">Our story</Link></li>
+            <li><Link href="/journal">Journal</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </nav>
