@@ -11,7 +11,6 @@ export default function Home() {
 
       <main>
         <section className="hero" id="home">
-          <div className="hero-index" aria-hidden="true">01 / 04</div>
           <div className="hero-content">
             <p className="eyebrow">AUTHENTIC LEATHER COLLECTION</p>
             <h1><span>Carry the</span><br />character.</h1>
