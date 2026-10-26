@@ -56,7 +56,7 @@ export default function Home() {
           <ol>
             <li><span>01</span><h3>Choose your direction</h3><p>Tell us the style, colour and purpose you have in mind.</p></li>
             <li><span>02</span><h3>Confirm the details</h3><p>We confirm availability, options, dimensions and delivery with you directly.</p></li>
-            <li><span>03</span><h3>Pay on delivery</h3><p>Your order is paid for when it arrives.</p></li>
+            <li><span>03</span><h3>Pay on order</h3><p>Your order is paid for when you place it.</p></li>
           </ol>
           <Link href="/contact" className="text-link order-journey-link">Start an enquiry <span aria-hidden="true">↘</span></Link>
         </section>
@@ -96,7 +96,7 @@ export default function Home() {
             <p><strong>Location:</strong> Nairobi, Kenya</p>
             <p><strong>Ordering:</strong> Chat with us directly on WhatsApp</p>
             <p><strong>Order time:</strong> Approximately two weeks</p>
-            <p><strong>Payment:</strong> Pay on delivery</p>
+            <p><strong>Payment:</strong> Pay on order</p>
           </div>
           <a className="button" href="https://wa.me/254720929666?text=Hello%20Looking%20Good%20Rugged%2C%20I%20would%20like%20to%20place%20an%20order.">PLACE YOUR ORDER</a>
         </section>
