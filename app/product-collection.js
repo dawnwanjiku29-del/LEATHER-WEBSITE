@@ -106,6 +106,7 @@ export default function ProductCollection() {
                   <span className="tag">{product.tag}</span>
                   <h3><button className="product-title" type="button" onClick={() => setSelectedProduct(product)}>{product.name}</button></h3>
                   <p className="product-price">{productPrice(product)}</p>
+                  <p className="product-sizes">Sizes: Small · Medium · Large</p>
                   <p>{product.description}</p>
                   <div className="product-actions"><button className="details-link" type="button" onClick={() => setSelectedProduct(product)}>View details</button><a className="enquire" href={whatsappHref(product)}>Place your order</a></div>
                 </div>
@@ -130,7 +131,7 @@ export default function ProductCollection() {
               <p className="eyebrow">{selectedProduct.tag}</p>
               <h3 id="product-dialog-title">{selectedProduct.name}</h3>
               <p>{selectedProduct.description}</p>
-              <dl className="product-facts"><div><dt>Price</dt><dd>{productPrice(selectedProduct)}</dd></div><div><dt>Payment</dt><dd>Pay on delivery</dd></div><div><dt>Order time</dt><dd>Approximately two weeks</dd></div><div><dt>Colours</dt><dd>{availableColours}</dd></div><div><dt>Dimensions</dt><dd>Ask us for the exact W × H × D</dd></div><div><dt>Collection</dt><dd>{selectedProduct.category}</dd></div><div><dt>Care</dt><dd>Ask us for leather-care guidance</dd></div></dl>
+              <dl className="product-facts"><div><dt>Price</dt><dd>{productPrice(selectedProduct)}</dd></div><div><dt>Sizes</dt><dd>Small, Medium, and Large</dd></div><div><dt>Payment</dt><dd>Pay on delivery</dd></div><div><dt>Order time</dt><dd>Approximately two weeks</dd></div><div><dt>Colours</dt><dd>{availableColours}</dd></div><div><dt>Dimensions</dt><dd>Ask us for the exact W × H × D</dd></div><div><dt>Collection</dt><dd>{selectedProduct.category}</dd></div><div><dt>Care</dt><dd>Ask us for leather-care guidance</dd></div></dl>
               <a className="button" href={whatsappHref(selectedProduct)}>Place your order</a>
             </div>
           </section>
